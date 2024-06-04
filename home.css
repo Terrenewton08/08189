@@ -101,3 +101,108 @@ footer p {
         width: 90%;
     }
 }
+
+.txt-editor {
+    margin: 20px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    width: calc(100% - 40px);
+    overflow: hidden;
+}
+
+#txtArea {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    resize: none;
+}
+
+#txtFileInput {
+    margin-bottom: 10px;
+}
+
+#openBtn,
+#saveBtn {
+    width: 48%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#openBtn:hover,
+#saveBtn:hover {
+    background-color: #45a049;
+}
+
+.event-modal {
+    max-width: none;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+}
+
+.modal-content {
+    margin: 0 auto;
+    max-width: 400px;
+    width: 100%;
+}
+
+.modal-content input,
+.modal-content textarea {
+    width: calc(100% - 20px);
+    margin-bottom: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    resize: none;
+}
+
+.modal-content button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.modal-content button:hover {
+    background-color: #45a049;
+}
+
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(40px, 1fr));
+    gap: 5px;
+}
+
+.prev-date div,
+.next-date div {
+    color: rgba(169, 169, 169, 1); /* Gris sólido */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.prev-date div,
+.next-date div {
+    color: rgba(169, 169, 169, 1); /* Gris sólido */
+}
