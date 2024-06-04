@@ -117,3 +117,31 @@ document.addEventListener('DOMContentLoaded', function() {
 
     renderCalendar();
 });
+
+document.getElementById('saveBtn').addEventListener('click', function() {
+    const content = document.getElementById('txtArea').value;
+    const blob = new Blob([content], { type: 'text/plain' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'documento.txt';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+});
+
+document.getElementById('openBtn').addEventListener('click', function() {
+    document.getElementById('txtFileInput').click();
+});
+
+document.getElementById('txtFileInput').addEventListener('change', function(event) {
+    const file = event.target.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            document.getElementById('txtArea').value = e.target.result;
+        };
+        reader.readAsText(file);
+    }
+});
